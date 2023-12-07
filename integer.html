@@ -1,0 +1,180 @@
+1                                                                                                                                                                                           
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+.zshrc (1,1) | ft:zsh | unix | utf-8                                                                                                                           Alt-g: bindings, Ctrl-g: help
+                                                                                                                                                                                            
+ 75 # enable color support of ls and also add handy aliases                                                                                                                                 
+ 76 if [ -x /usr/bin/dircolors ]; then                                                                                                                                                      
+ 77     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"                                                                                               
+ 78     alias ls='ls --color=auto'                                                                                                                                                          
+ 79     #alias dir='dir --color=auto'                                                                                                                                                       
+ 80     #alias vdir='vdir --color=auto'                                                                                                                                                     
+ 81                                                                                                                                                                                         
+ 82     alias grep='grep --color=auto'                                                                                                                                                      
+ 83     alias fgrep='fgrep --color=auto'                                                                                                                                                    
+ 84     alias egrep='egrep --color=auto'                                                                                                                                                    
+ 85 fi                                                                                                                                                                                      
+ 86                                                                                                                                                                                         
+ 87 # colored GCC warnings and errors                                                                                                                                                       
+ 88 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'                                                                                                 
+ 89                                                                                                                                                                                         
+ 90 # some more ls aliases                                                                                                                                                                  
+ 91 alias ll='ls -alF'                                                                                                                                                                      
+ 92 alias la='ls -A'                                                                                                                                                                        
+ 93 alias l='ls -CF'                                                                                                                                                                        
+ 94 alias a='clear'                                                                                                                                                                         
+ 95 alias aa='ls -l'                                                                                                                                                                        
+ 96                                                                                                                                                                                         
+ 97 alias actualizar='~/actualizar'                                                                                                                                                         
+ 98 alias nas12='ftp 172.20.10.12'                                                                                                                                                          
+ 99 alias ..='cd ..'                                                                                                                                                                        
+100 # Add an "alert" alias for long running commands.  Use like so:                                                                                                                         
+101 #   sleep 10; alert                                                                                                                                                                     
+102 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'                    
+103                                                                                                                                                                                         
+104 # Alias definitions.                                                                                                                                                                    
+105 # You may want to put all your additions into a separate file like                                                                                                                      
+106 # ~/.bash_aliases, instead of adding them here directly.                                                                                                                                
+107 # See /usr/share/doc/bash-doc/examples in the bash-doc package.                                                                                                                         
+108                                                                                                                                                                                         
+109 if [ -f ~/.bash_aliases ]; then                                                                                                                                                         
+110     . ~/.bash_aliases                                                                                                                                                                   
+111 fi                                                                                                                                                                                      
+112                                                                                                                                                                                         
+113 # enable programmable completion features (you don't need to enable                                                                                                                     
+114 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile                                                                                                                    
+115 # sources /etc/bash.bashrc).                                                                                                                                                            
+116 if ! shopt -oq posix; then                                                                                                                                                              
+117   if [ -f /usr/share/bash-completion/bash_completion ]; then                                                                                                                            
+118     . /usr/share/bash-completion/bash_completion                                                                                                                                        
+119   elif [ -f /etc/bash_completion ]; then                                                                                                                                                
+120     . /etc/bash_completion                                                                                                                                                              
+121   fi                                                                                                                                                                                    
+122 fi                                                                                                                                                                                      
+123                                                                                                                                                                                         
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+.bashrc (7,1) | ft:shell | unix | utf-8                                                                                                                        Alt-g: bindings, Ctrl-g: help
+                                                                                                                                                                                            
+ 1 <!DOCTYPE html>                                                                                                                                                                          
+ 2 <html>                                                                                                                                                                                   
+ 3     <head>                                                                                                                                                                               
+ 4         <title>Integer form</title>                                                                                                                                                      
+ 5         <link rel="stylesheet" type="text/css" href="style.css">                                                                                                                         
+ 6     </head>                                                                                                                                                                              
+ 7     <body>                                                                                                                                                                               
+ 8         <div id="main">                                                                                                                                                                  
+ 9             <form action="https://www.random.org/integers/">                                                                                                                             
+10                 <table>                                                                                                                                                                  
+11                     <tr>                                                                                                                                                                 
+12                         <td><label>Number of integers:</label></td>                                                                                                                      
+13                         <td><input type="text" name="num"/></td>                                                                                                                         
+14                     </tr>                                                                                                                                                                
+15                     <tr>                                                                                                                                                                 
+16                         <td><label>Min value:</label></td>                                                                                                                               
+17                         <td><input type="text" name="min"/></td>                                                                                                                         
+18                     </tr>                                                                                                                                                                
+19                     <tr>                                                                                                                                                                 
+20                         <td><label>Max value:</label></td>                                                                                                                               
+21                         <td><input type="text" name="max"/></td>                                                                                                                         
+22                     </tr>                                                                                                                                                                
+23                     <tr>                                                                                                                                                                 
+24                         <td><label>Columns:</label></td>                                                                                                                                 
+25                         <td><input type="text" name="col"/></td>                                                                                                                         
+26                     </tr>                                                                                                                                                                
+27                     <tr>                                                                                                                                                                 
+28                         <td><label>Base:</label></td>                                                                                                                                    
+29                         <td>                                                                                                                                                             
+30                             <select name="base">                                                                                                                                         
+31                                 <option value="2">2</option>                                                                                                                             
+32                                 <option value="8">8</option>                                                                                                                             
+33                                 <option value="10">10</option>                                                                                                                           
+34                                 <option value="16">16</option>                                                                                                                           
+35                             </select>                                                                                                                                                    
+36                         </td>                                                                                                                                                            
+37                     </tr>                                                                                                                                                                
+38                     <tr>                                                                                                                                                                 
+39                         <td><label>Format</label></td>                                                                                                                                   
+40                         <td>                                                                                                                                                             
+41                             <select name="format">                                                                                                                                       
+42                                 <option value="plain">Plain</option>                                                                                                                     
+43                                 <option value="html">HTML</option>                                                                                                                       
+44                             </select>                                                                                                                                                    
+45                         </td>                                                                                                                                                            
+46                     </tr>                                                                                                                                                                
+47                     <tr>                                                                                                                                                                 
+48                         <td><input type="submit" value="Submit"/></td>                                                                                                                   
+49                         <td></td>                                                                                                                                                        
+50                     </tr>                                                                                                                                                                
+51                 </table>                                                                                                                                                                 
+52                                                                                                                                                                                          
+53             </form>                                                                                                                                                                      
+54         </div>                                                                                                                                                                           
+55     </body>                                                                                                                                                                              
+56                                                                                                                                                                                          
+57 </html>                                                                                                                                                                                  
+                                                                                                                                                                                            
+integer.html (1,1) | ft:html | unix | utf-8                                                                                                                    Alt-g: bindings, Ctrl-g: help
+                                                                                                                                                                                            
